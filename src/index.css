@@ -1,0 +1,95 @@
+.dark-mode body {
+  z-index: -1;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #1a1919;
+}
+
+.dark-mode {
+  background-color: #1a1919;
+  color: #fff;
+}
+
+
+.light-mode .toggle-container {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius : 5px;
+  width: 68px;
+}
+
+
+input[type="checkbox"].checkbox {
+  width: 40px;
+  height: 10px;
+  background: #555;
+  position: relative;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  vertical-align: 2px;
+  outline: none;
+}
+
+input[type="checkbox"].checkbox:checked + label {
+  left: 39px;
+}
+
+input[type="checkbox"].checkbox:focus-visible {
+  outline: solid 2px white;
+}
+
+input[type="checkbox"].checkbox + label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  left: 15px;
+  background: #fff;
+  opacity: 0.9;
+  background-color: grey;
+}
+
+.bg-dark {
+  background-color: #1a1919;
+}
+
+.bg-light {
+  background-color: #fff;
+}
+
+.dark-mode .search{
+  width: 300px;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  background-color: #212529;
+  color : #fff;
+  margin : 40px 0 20px 0;
+}
+
+.dark-mode .tableau {
+  background-color: #212529;
+  color : #fff
+}
+
+.light-mode .search {
+  width: 300px;
+  padding: 7px;
+  border-radius: 5px;
+  border: solid 1px #6c757d;
+  background-color: transparent;
+  margin : 40px 0 20px 0;
+}
