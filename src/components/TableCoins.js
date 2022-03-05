@@ -2,6 +2,7 @@ import React from "react";
 import CoinRow from "./CoinRow";
 import theme from "styled-theming";
 import styled from "styled-components";
+import "../index.css"
 
 export const textColor = theme("theme", {
     light: "#000",

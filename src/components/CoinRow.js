@@ -1,6 +1,7 @@
 import React from "react";
 import theme from "styled-theming";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const textColor = theme("theme", {
     light: "#000",
@@ -15,11 +16,13 @@ export const textColor = theme("theme", {
 const CoinRow = ({coin, index}) => {
     return (
         <tr>
+            <Link style={{textDecoration:"none"}} to={`/paire/${index}`}>
             <td>
                 <TextColor>
                     <span>{index}</span>
                 </TextColor>
             </td>
+            </Link>
             <td>
                 <img src={coin.image} alt="{coin.name}" style={{width: '3%'}} className="me-4"/>
                 <TextColor>
@@ -35,7 +38,9 @@ const CoinRow = ({coin, index}) => {
             <td className={coin.price_change_percentage_24h > 0 ? 'text-success' : 'text-danger' }>
                 {Math.round(coin.price_change_percentage_24h*100)/100} %
             </td>
+           
         </tr>
+        
     )
 }
 export default CoinRow
