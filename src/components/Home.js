@@ -1,5 +1,6 @@
 import Header from './Header';
 import TableCoins from "./TableCoins";
+import Exchanges from './Exchanges';
 import theme from "styled-theming";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
@@ -43,6 +44,7 @@ function Home () {
     return (
         <Container>
             <Header/>
+            <Exchanges/>
             <h1 className='h1 text-center mt-4'>Crypto Market Cap</h1>
             <div className='row mx-2'>
                 <input type="text" placeholder="Search a Coin" className='search' autoFocus onChange={(e) => setSearch(e.target.value)}/>

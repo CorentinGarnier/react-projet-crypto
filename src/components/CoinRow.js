@@ -16,13 +16,14 @@ export const textColor = theme("theme", {
 const CoinRow = ({coin, index}) => {
     return (
         <tr>
-            <Link style={{textDecoration:"none"}} to={`/paire/${index}`}>
             <td>
+            <Link style={{textDecoration:"none"}} to={`/paire?token=${coin.id}`}>
                 <TextColor>
                     <span>{index}</span>
                 </TextColor>
-            </td>
             </Link>
+            </td>
+            
             <td>
                 <img src={coin.image} alt="{coin.name}" style={{width: '3%'}} className="me-4"/>
                 <TextColor>
